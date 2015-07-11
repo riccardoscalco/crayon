@@ -126,8 +126,14 @@ footer a {
   font-size: 1.4em;
   max-width: 400px;
   margin: 3em auto 0 auto;
-  padding: 0 1.5em 0 1.5em;
+  padding: 0;
   line-height: 1.6em;
+}
+
+@media  (max-width: 360px) {
+  .intro p {
+    padding: 0 1.5em 0 1.5em;
+  }
 }
 
 .intro a {
