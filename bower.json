@@ -1,0 +1,31 @@
+{
+  "name": "crayon",
+  "homepage": "https://github.com/riccardoscalco/crayon",
+  "authors": [
+    "Riccardo Scalco <riccardo.scalco@gmail.com>"
+  ],
+  "description": "Crayon.css is a list of crayon colors css variables.",
+  "main": [
+    "crayon.styl",
+    "crayon.css",
+    "crayon.scss",
+    "crayon.less"
+  ],
+  "moduleType": [
+    "globals"
+  ],
+  "keywords": [
+    "css",
+    "variables",
+    "colors",
+    "preprocessors"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
