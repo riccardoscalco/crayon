@@ -270,7 +270,7 @@
     "WildWatermelon": "#fc6c85",
     "WinterSky": "#ff007c",
     "WinterWizard": "#a0e6ff",
-    "Wintergreen Dream": "#56887d",
+    "WintergreenDream": "#56887d",
     "Wisteria": "#cda4de",
     "Yellow": "#fce883",
     "YellowGreen": "#c5e384",

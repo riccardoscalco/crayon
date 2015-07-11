@@ -32,8 +32,12 @@ figcaption p {
 	font-size: 1em;
 	font-weight: 400;
 	letter-spacing: 0.3em;
-	text-transform: lowercase;
+	/*text-transform: lowercase;*/
 }
+
+/*figcaption p:first-child {
+	text-transform: uppercase;
+}*/
 
 code {
   font-family: "Inconsolata", monospace;
@@ -162,10 +166,6 @@ footer a {
   .middle h1 {
   	font-size: 12em;
   }
-}
-
-figcaption p:first-child {
-	text-transform: uppercase;
 }
 
 path {

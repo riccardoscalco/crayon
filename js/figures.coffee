@@ -266,7 +266,7 @@ colors = {
   "WildWatermelon": "#fc6c85",
   "WinterSky": "#ff007c",
   "WinterWizard": "#a0e6ff",
-  "Wintergreen Dream": "#56887d",
+  "WintergreenDream": "#56887d",
   "Wisteria": "#cda4de",
   "Yellow": "#fce883",
   "YellowGreen": "#c5e384",
@@ -339,7 +339,7 @@ for k,v of colors
 
   x = hexToRgb v
   l = rgbToHsl(x.r, x.g, x.b)[2]
-  
+
   if l <= 0.6
     i = i + 1
     fig = sec1.append "figure"
@@ -364,4 +364,3 @@ for k,v of colors
     figcap.append "p"
       .text v
 console.log i
-

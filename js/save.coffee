@@ -266,7 +266,7 @@ colors = {
   "WildWatermelon": "#fc6c85",
   "WinterSky": "#ff007c",
   "WinterWizard": "#a0e6ff",
-  "Wintergreen Dream": "#56887d",
+  "WintergreenDream": "#56887d",
   "Wisteria": "#cda4de",
   "Yellow": "#fce883",
   "YellowGreen": "#c5e384",
@@ -281,20 +281,20 @@ rand = () ->
     .replace /[^a-z]+/g, ""
     .slice 0, 5
 
-randomInt = (max,min=0) -> 
+randomInt = (max,min=0) ->
   Math.floor(Math.random() * (max - min) + min)
 
 save = (node, filename) ->
-    window.xx = node
-    a = document.createElement "a"
-    document.body.appendChild a
-    a.style = "display: none" 
-    blob = new Blob([node], { "type" : "text\/html" });
-    url = window.URL.createObjectURL blob
-    a.href = url
-    a.download = filename
-    a.click()
-    window.URL.revokeObjectURL url
+  window.xx = node
+  a = document.createElement "a"
+  document.body.appendChild a
+  a.style = "display: none"
+  blob = new Blob([node], { "type" : "text\/html" })
+  url = window.URL.createObjectURL blob
+  a.href = url
+  a.download = filename
+  a.click()
+  window.URL.revokeObjectURL url
 
 dt = 0.005
 N = 35
@@ -335,7 +335,7 @@ g = () ->
 
     points = (f(t) for t in (dt * i for i in [0..N]))
 
-    svg = @append "svg" 
+    svg = @append "svg"
       .attr "viewBox", "0 0 300 300"
       .attr "preserveAspectRatio", "xMidYMid"
       .attr
@@ -348,7 +348,7 @@ g = () ->
     stdDeviation = randomInt(6,4) + ""
     #stdDeviation = "10"
     scale = "100"
-    
+
     filterid = rand()
     filter = svg
       .append "filter"
@@ -407,28 +407,12 @@ g = () ->
       .datum points
       .attr "transform", "translate(150,150) scale(1.5)"
 
-    s.append "path" 
+    s.append "path"
       .attr
         "d": line
       .style
         "filter": "url(#" + filterid + ")"
         "stroke": colors[colorName]
-    
-    #svg.append "text"
-    #  .text colorName
-    #  .attr
-    #    "x": 150
-    #    "y": 270
-    #    "class": "colors"
-    #  .style
-    #    "text-transform": "uppercase"
-
-    #svg.append "text"
-    #  .text colors[colorName]
-    #  .attr
-    #    "x": 150
-    #    "y": 287
-    #    "class": "colors"
 
     save @.node().innerHTML, colorName + ".snap.svg"
 
@@ -460,12 +444,13 @@ myLoop = () ->
       .attr
         "class": "Grid-cell"
     art.call(draw)
-    i++;
+    i++
     if (i < L)
       myLoop()
   , 300)
 
 myLoop()
 
-# Then I produced png version of every svg image with the following command (on macosx)
+# Then I produced png version of every svg image with the following
+# command (on macosx)
 # for i in *.svg; do /Applications/Inkscape.app/Contents/Resources/script -z -e "/Users/Riccardo/Desktop/website/snaps/$i.png" -w 300 -h 300 "/Users/Riccardo/Desktop/website/snaps/$i"; done
