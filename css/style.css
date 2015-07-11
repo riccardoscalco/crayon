@@ -32,6 +32,7 @@ figcaption p {
 	font-size: 1em;
 	font-weight: 400;
 	letter-spacing: 0.3em;
+  line-height: 1.7em;
 	/*text-transform: lowercase;*/
 }
 
@@ -47,7 +48,14 @@ code {
   padding: 3em 3em 3em 3em;
   margin-bottom: 0;
   background-color: #fefefa;
-  max-width: 200px;}
+  max-width: 200px;
+}
+
+@media  (max-width: 360px) {
+  code {
+    padding: 2em 2em 2em 2em;
+  }
+}
 
 pre {
   margin: 10px 10px 10px 10px;
@@ -91,6 +99,12 @@ footer a {
   margin: auto;
 }
 
+@media  (max-width: 360px) {
+  .intro {
+    max-width: 90vw;
+  }
+}
+
 .intro h1 {
   font-size: 8em;
   margin: 0.8em 0 0.2em 0;
@@ -112,6 +126,7 @@ footer a {
   font-size: 1.4em;
   max-width: 400px;
   margin: 3em auto 0 auto;
+  padding: 0 1.5em 0 1.5em;
   line-height: 1.6em;
 }
 

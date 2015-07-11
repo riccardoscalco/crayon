@@ -357,7 +357,7 @@
     } else {
       fig = sec2.append("figure").attr("class", "Grid-cell");
       fig.append("img").attr({
-        "src": "pngsnaps/" + k + ".snap.svg.png"
+        "src": "pngsmallsnaps/" + k + ".snap.svg.png"
       });
       figcap = fig.append("figcaption");
       figcap.append("p").text(k);
