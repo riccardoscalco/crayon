@@ -1,5 +1,5 @@
 html, body {
-  width: 100 vw;
+  width: 100vw;
   font-family: 'Montserrat', sans-serif;
   font-size: 10px;
   color: #333;
@@ -33,12 +33,7 @@ figcaption p {
 	font-weight: 400;
 	letter-spacing: 0.3em;
   line-height: 1.7em;
-	/*text-transform: lowercase;*/
 }
-
-/*figcaption p:first-child {
-	text-transform: uppercase;
-}*/
 
 code {
   font-family: "Inconsolata", monospace;
@@ -152,6 +147,7 @@ footer a {
   padding-top: 0.8em;
   padding-bottom: 0.8em;
   margin-bottom: 6em;
+  background-image: -webkit-linear-gradient(135deg, #353839 10%, transparent 10%, transparent 50%, #353839 50%, #353839 60%, transparent 60%, transparent);
   background-image: linear-gradient(-45deg, #353839 10%, transparent 10%, transparent 50%, #353839 50%, #353839 60%, transparent 60%, transparent);
   background-size: 24px 24px;
 }
@@ -172,6 +168,7 @@ footer a {
 }
 
 .middle {
+    background-image: -webkit-linear-gradient(135deg, #353839 25%, transparent 25%, transparent 50%, #353839 50%, #353839 75%, transparent 75%, transparent);
     background-image: linear-gradient(-45deg, #353839 25%, transparent 25%, transparent 50%, #353839 50%, #353839 75%, transparent 75%, transparent);
     background-size: 32px 32px;
     padding: 50px 0 50px 0;
@@ -197,10 +194,22 @@ path {
 }
 
 .Grid {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: flex-start;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   max-width: 1200px;
   margin: auto;
 }
@@ -219,7 +228,9 @@ path {
 
 @media  (max-width: 600px) {
   .Grid {
-    justify-content: space-around;
+    -webkit-justify-content: space-around;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
   }
 }
 
