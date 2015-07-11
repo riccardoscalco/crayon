@@ -1,5 +1,4 @@
-# Crayon.css
+# Crayon.css Page
 
-Crayon.css is a list of crayon color variables,
-use it with your favourite CSS preprocessor.
-It is ready for Stylus, Sass and Less.
+Crayon.css is a list of crayon colors variables,
+usable with your favourite CSS preprocessor, being it Stylus, Sass or Less.
