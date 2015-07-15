@@ -352,7 +352,7 @@
         "src": "pngsnaps/" + k + ".snap.svg.png"
       });
       figcap = fig.append("figcaption");
-      figcap.append("p").text(k);
+      figcap.append("p").text(k.toLowerCase());
       figcap.append("p").text(v);
     } else {
       fig = sec2.append("figure").attr("class", "Grid-cell");
@@ -360,7 +360,7 @@
         "src": "pngsmallsnaps/" + k + ".snap.svg.png"
       });
       figcap = fig.append("figcaption");
-      figcap.append("p").text(k);
+      figcap.append("p").text(k.toLowerCase());
       figcap.append("p").text(v);
     }
   }

@@ -349,7 +349,7 @@ for k,v of colors
         "src": "pngsnaps/" + k + ".snap.svg.png"
     figcap = fig.append "figcaption"
     figcap.append "p"
-      .text k
+      .text k.toLowerCase()
     figcap.append "p"
       .text v
   else
@@ -360,7 +360,7 @@ for k,v of colors
         "src": "pngsmallsnaps/" + k + ".snap.svg.png"
     figcap = fig.append "figcaption"
     figcap.append "p"
-      .text k
+      .text k.toLowerCase()
     figcap.append "p"
       .text v
 console.log i
