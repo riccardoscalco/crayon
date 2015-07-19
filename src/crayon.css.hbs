@@ -1,0 +1,5 @@
+:root {
+  {{#each colors}}
+  --{{@root.prefix}}{{@key}}: {{.}};
+  {{/each}}
+}

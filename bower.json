@@ -6,10 +6,10 @@
   ],
   "description": "Crayon.css is a list of crayon colors css variables.",
   "main": [
-    "crayon.styl",
-    "crayon.css",
-    "crayon.scss",
-    "crayon.less"
+    "dist/crayon.styl",
+    "dist/crayon.css",
+    "dist/crayon.scss",
+    "dist/crayon.less"
   ],
   "moduleType": [
     "globals"
