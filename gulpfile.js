@@ -10,7 +10,7 @@ var scProp = function(propName){
   };
 };
 
-templateData.prefix = 'color-';
+templateData.prefix = '';
 
 templateData.colors = Object.keys(templateData.colors)
   .map(function(colorName){
