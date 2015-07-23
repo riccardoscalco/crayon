@@ -351,6 +351,7 @@ for k,v of colors
       .attr "class", "Grid-cell"
     fig.append "img"
       .attr
+        "width": 300
         "src": do () ->
           if hd
             "pngbigsnapspic/" + k + ".snap.svg.png"
@@ -365,6 +366,7 @@ for k,v of colors
       .attr "class", "Grid-cell"
     fig.append "img"
       .attr
+        "width": 300
         "src": do () ->
           if hd
             "pngbigsnapspic/" + k + ".snap.svg.png"

@@ -355,6 +355,7 @@
       i = i + 1;
       fig = sec1.append("figure").attr("class", "Grid-cell");
       fig.append("img").attr({
+        "width": 300,
         "src": (function() {
           if (hd) {
             return "pngbigsnapspic/" + k + ".snap.svg.png";
@@ -369,6 +370,7 @@
     } else {
       fig = sec2.append("figure").attr("class", "Grid-cell");
       fig.append("img").attr({
+        "width": 300,
         "src": (function() {
           if (hd) {
             return "pngbigsnapspic/" + k + ".snap.svg.png";
