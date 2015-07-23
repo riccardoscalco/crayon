@@ -357,7 +357,7 @@
       fig.append("img").attr({
         "src": (function() {
           if (hd) {
-            return "svgsnaps/" + k + ".snap.svg";
+            return "pngbigsnapspic/" + k + ".snap.svg.png";
           } else {
             return "pngsmallsnaps/" + k + ".snap.svg.png";
           }
@@ -371,7 +371,7 @@
       fig.append("img").attr({
         "src": (function() {
           if (hd) {
-            return "svgsnaps/" + k + ".snap.svg";
+            return "pngbigsnapspic/" + k + ".snap.svg.png";
           } else {
             return "pngsmallsnaps/" + k + ".snap.svg.png";
           }

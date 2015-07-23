@@ -353,7 +353,7 @@ for k,v of colors
       .attr
         "src": do () ->
           if hd
-            "svgsnaps/" + k + ".snap.svg"
+            "pngbigsnapspic/" + k + ".snap.svg.png"
           else "pngsmallsnaps/" + k + ".snap.svg.png"
     figcap = fig.append "figcaption"
     figcap.append "p"
@@ -367,7 +367,7 @@ for k,v of colors
       .attr
         "src": do () ->
           if hd
-            "svgsnaps/" + k + ".snap.svg"
+            "pngbigsnapspic/" + k + ".snap.svg.png"
           else "pngsmallsnaps/" + k + ".snap.svg.png"
     figcap = fig.append "figcaption"
     figcap.append "p"
