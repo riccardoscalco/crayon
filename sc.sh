@@ -1,5 +1,5 @@
 #!/bin/bash
-FILES=/home/riccardo/Git/crayon/pngsmallsnaps/*
+FILES=/home/riccardo/Git/crayon/pngbigsnapspic//*
 for f in $FILES
 do
   echo "Processing $f file..."

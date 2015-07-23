@@ -288,6 +288,9 @@ hexToRgb = (hex) ->
   else
     null
 
+isHighDensity= () ->
+  return ((window.matchMedia && (window.matchMedia('only screen and (min-resolution: 124dpi), only screen and (min-resolution: 1.3dppx), only screen and (min-resolution: 48.8dpcm)').matches || window.matchMedia('only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 2.6/2), only screen and (min--moz-device-pixel-ratio: 1.3), only screen and (min-device-pixel-ratio: 1.3)').matches)) || (window.devicePixelRatio && window.devicePixelRatio > 1.3))
+
 # http://stackoverflow.com/questions/2353211/hsl-to-rgb-color-conversion
 ###*
 # Converts an RGB color value to HSL. Conversion formula
@@ -334,6 +337,8 @@ rgbToHsl = (r, g, b) ->
 sec1 = d3.select ".light div"
 sec2 = d3.select ".dark div"
 
+hd = isHighDensity()
+
 i = 0
 for k,v of colors
 
@@ -346,7 +351,10 @@ for k,v of colors
       .attr "class", "Grid-cell"
     fig.append "img"
       .attr
-        "src": "pngsmallsnaps/" + k + ".snap.svg.png"
+        "src": do () ->
+          if hd
+            "svgsnaps/" + k + ".snap.svg"
+          else "pngsmallsnaps/" + k + ".snap.svg.png"
     figcap = fig.append "figcaption"
     figcap.append "p"
       .text k.toLowerCase()
@@ -357,7 +365,10 @@ for k,v of colors
       .attr "class", "Grid-cell"
     fig.append "img"
       .attr
-        "src": "pngsmallsnaps/" + k + ".snap.svg.png"
+        "src": do () ->
+          if hd
+            "svgsnaps/" + k + ".snap.svg"
+          else "pngsmallsnaps/" + k + ".snap.svg.png"
     figcap = fig.append "figcaption"
     figcap.append "p"
       .text k.toLowerCase()
